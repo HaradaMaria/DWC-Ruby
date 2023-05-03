@@ -1,9 +1,14 @@
-i=1
-while i <=10 do
-    if i==5
-        puts "終了"
-        break
+class Car
+    def self.run(distance)
+        puts "車で#{distance}キロ走ります"
     end
-    puts i
-    i+=1
 end
+
+class Truck<Car
+    def self.run(distance)
+        super
+        puts "大きな荷物を載せて走ります"
+    end
+end
+
+Truck.run(5)
